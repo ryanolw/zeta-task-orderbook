@@ -14,7 +14,9 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
-  rules: {},
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+  },
   parserOptions: {
     project: './tsconfig.json',
   },

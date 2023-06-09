@@ -1,7 +1,6 @@
 # Orderbook component demonstration
 
-
-This repo exposes a modular Orderbook component, that renders bids and asks.
+This repo contains a modular Orderbook component, that renders bids and asks.
 
 ## Installation
 
@@ -9,24 +8,38 @@ This repo exposes a modular Orderbook component, that renders bids and asks.
 $ pnpm install
 ```
 
-## Usage
+## Basic Usage
 ```jsx
 <Orderbook
-  apiUrl={'https://...'} 
-  apiAdapter="zeta"
+  dataAdapter={({ zeta }) => zeta('<datasource URL>')}
   pollingIntervalMs={5000} />
 ```
+
 ### Props
 
-#### `apiUrl: string`
-API endpoint to retrieve the orderbook data.
+#### `dataAdapter: (dataAdapters: DataAdapters) => OrderBookData | Promise<OrderBookData>`
+ (Required) A function that retrieves orderbook data when called. A map of whitelisted data adapters are passed into this function as the first argument for convenience.
 
-#### `dataAdapter?: 'zeta' | (apiUrl: string) => OrderBookData`
-Name of the whitelisted dataAdapter to use. The data adapter is responsible for transforming data retrieved from `apiUrl` to a structure that is understood by the Orderbook component. 
-A custom data adapter can also be used by passing in a function. The function will receive an `apiUrl` argument and should return an object that satisfies the `OrderBookData` type. default: `"zeta"`
+ A custom data adapter implementation can also be used - this function should return an object that satisfies the `OrderBookData` type. Examples:
+ 
+ **Custom fetch function:**
+ ```ts
+ <Orderbook
+    dataAdapter={() => fetch('<datasource URL>').then(res => res.json())}
+    pollingIntervalMs={5000} />
+ ```
+
+**Local state store:**
+ ```ts
+ <Orderbook
+    dataAdapter={() => localStore.retrieveOrderData()}
+    pollingIntervalMs={5000} />
+ ```
+/
 
 #### `pollingIntervalMs?: number`
-Interval (in milliseconds) to poll `apiUrl` for new data. Default: 5000
+Interval (in milliseconds) to invoke `dataAdapter` for new data. Default: 5000
+
 
 ## Development & Testing
 

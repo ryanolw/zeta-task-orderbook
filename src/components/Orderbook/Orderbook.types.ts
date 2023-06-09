@@ -18,18 +18,28 @@ export type EnrichedOrderProp = {
 
 export type OrderbookProps = {
   /**
-   * API endpoint to retrieve the orderbook data.
+   * (Required) A function that retrieves orderbook data when called. A map of whitelisted data adapters are passed into this function as the first argument for convenience.
+   *
+   * A custom data adapter implementation can also be used - this function should return an object that satisfies the `OrderBookData` type.
+   * Examples:
+   * ```ts
+   * <Orderbook
+   *    dataAdapter={() => fetch('<datasource URL>').then(res => res.json())}
+   *    pollingIntervalMs={5000} />
+   * ```
+   *
+   * ```ts
+   * <Orderbook
+   *    dataAdapter={() => localStore.retrieveOrderData()}
+   *    pollingIntervalMs={5000} />
+   * ```
    */
-  apiUrl: string;
+  dataAdapter: (
+    whitelistedAdapters: DataAdapters
+  ) => Promise<OrderBookData> | OrderBookData;
 
   /**
-   * Name of the whitelisted dataAdapter to use. The data adapter is responsible for transforming data retrieved from `apiUrl` to a structure that is understood by the Orderbook component. default: "zeta"
-   * A custom data adapter can also be used by passing in a function. The function will receive an `apiUrl` argument and should return an object that satisfies the `OrderBookData` type.
-   */
-  dataAdapter: keyof DataAdapters | DataAdapter;
-
-  /**
-   * Interval (in milliseconds) to poll `apiUrl` for new data. Default: 5000
+   * Interval (in milliseconds) to invoke `dataAdapter` for new data. Default: 5000
    */
   pollingIntervalMs?: number;
 };

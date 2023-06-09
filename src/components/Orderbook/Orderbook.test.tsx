@@ -5,9 +5,15 @@ import dataAdapters from './adapters';
 jest.mock('./adapters');
 
 describe('Orderbook', () => {
-  test('should match snapshot when rendering order data', async () => {
+  test('should match snapshot when rendering order data using whitelisted data adapter', async () => {
     (dataAdapters.zeta as jest.Mock).mockReturnValue(sampleData);
-    const res = render(<Orderbook apiUrl="foo" dataAdapter="zeta" />);
+    const res = render(<Orderbook dataAdapter={({ zeta }) => zeta('foo')} />);
+    await waitForElementToBeRemoved(await res.findByText('Loading...'));
+    expect(res.asFragment()).toMatchSnapshot();
+  });
+
+  test('should match snapshot when rendering order data using custom data adapter', async () => {
+    const res = render(<Orderbook dataAdapter={() => sampleData} />);
     await waitForElementToBeRemoved(await res.findByText('Loading...'));
     expect(res.asFragment()).toMatchSnapshot();
   });

@@ -5,19 +5,14 @@ import dataAdapters from './adapters';
 import OrderbookBase from './components/OrderbookBase';
 
 export default function Orderbook({
-  apiUrl,
-  dataAdapter = 'zeta',
+  dataAdapter,
   pollingIntervalMs = 5000,
 }: OrderbookProps) {
   const [data, setData] = useState<OrderBookData | null>(null);
   const [error, setError] = useState<Error | null>(null);
   const fetchOrderData = async () => {
-    const orderDataFetcher =
-      typeof dataAdapter === 'function'
-        ? dataAdapter
-        : dataAdapters[dataAdapter];
     try {
-      const orderData: OrderBookData = await orderDataFetcher(apiUrl);
+      const orderData = await dataAdapter(dataAdapters);
       setData(orderData);
       setError(null);
     } catch (err) {
