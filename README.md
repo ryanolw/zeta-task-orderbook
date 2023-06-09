@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# Orderbook component demonstration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This repo exposes a modular Orderbook component, that renders bids and asks.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+```bash
+$ pnpm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
+```jsx
+<Orderbook
+  apiUrl={'https://...'} 
+  apiAdapter="zeta"
+  pollingIntervalMs={5000} />
+```
+### Props
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### `apiUrl: string`
+API endpoint to retrieve the orderbook data.
 
-### `npm test`
+#### `dataAdapter?: 'zeta' | (apiUrl: string) => OrderBookData`
+Name of the whitelisted dataAdapter to use. The data adapter is responsible for transforming data retrieved from `apiUrl` to a structure that is understood by the Orderbook component. 
+A custom data adapter can also be used by passing in a function. The function will receive an `apiUrl` argument and should return an object that satisfies the `OrderBookData` type. default: `"zeta"`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### `pollingIntervalMs?: number`
+Interval (in milliseconds) to poll `apiUrl` for new data. Default: 5000
 
-### `npm run build`
+## Development & Testing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Unit test
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+$ pnpm run test
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Development
 
-### `npm run eject`
+```bash
+$ pnpm run storybook
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Library choice
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Styling 
 
-## Learn More
+[Chakra UI](https://chakra-ui.com/getting-started) - theming library based on styled-system. By using this library, I am also making the assumption that the application codebase in which the Orderbook component will live in is built using Chakra UI / styled system. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Code style / linting
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ESLint and prettier
+
+
+### Testing
+
+Jest + React testing library is used as a lightweight unit testing framework for catching regression when new changes are introduced. This is done by comparing a snapshot of the existing component against a known desirable render state.
+Deterministic sample data source is used.
+
+Storybook provides visual tools for testing/developing component functionality, and is also used to define typical edge cases for verification. Actual datasource (from API) can be used.
+

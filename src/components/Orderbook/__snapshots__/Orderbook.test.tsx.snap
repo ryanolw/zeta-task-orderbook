@@ -1,0 +1,491 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Orderbook should match snapshot when rendering order data 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1usl3sb"
+  >
+    <div
+      class="chakra-stack css-1ne2chk"
+    >
+      <p
+        class="chakra-text css-11ze7cv"
+      >
+        Price
+      </p>
+      <p
+        class="chakra-text css-11ze7cv"
+      >
+        Size
+      </p>
+    </div>
+    <div
+      class="chakra-stack css-1gx94zz"
+    >
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-1ogj3e"
+        />
+        <p
+          class="chakra-text css-9fnj8l"
+        >
+          18.730
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          151.701
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-1tqpelg"
+        />
+        <p
+          class="chakra-text css-9fnj8l"
+        >
+          18.734
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          758.507
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-1bg6yau"
+        />
+        <p
+          class="chakra-text css-9fnj8l"
+        >
+          18.741
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          2022.685
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-gmalf9"
+        />
+        <p
+          class="chakra-text css-9fnj8l"
+        >
+          18.749
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          1142.531
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-ftigz9"
+        />
+        <p
+          class="chakra-text css-9fnj8l"
+        >
+          19.000
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          5.000
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-vpccyc"
+        />
+        <p
+          class="chakra-text css-9fnj8l"
+        >
+          19.250
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          5.000
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-5a5tht"
+        />
+        <p
+          class="chakra-text css-9fnj8l"
+        >
+          19.500
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          5.000
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-1i4wv4x"
+        />
+        <p
+          class="chakra-text css-9fnj8l"
+        >
+          20.000
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          5.000
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-fxafsu"
+        />
+        <p
+          class="chakra-text css-9fnj8l"
+        >
+          21.000
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          5.000
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-n5msg4"
+        />
+        <p
+          class="chakra-text css-9fnj8l"
+        >
+          24.500
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          0.500
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-1stdgjf"
+        />
+        <p
+          class="chakra-text css-9fnj8l"
+        >
+          25.000
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          0.500
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-1k77zqf"
+        />
+        <p
+          class="chakra-text css-9fnj8l"
+        >
+          26.000
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          0.380
+        </p>
+      </div>
+    </div>
+    <div
+      class="chakra-stack css-165casq"
+    >
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-1oho7yd"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          18.720
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          168.895
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-gyvep2"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          18.717
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          10.690
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-1sx24n2"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          18.716
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          844.473
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-6e7ghd"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          18.709
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          2251.928
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-nw9n8c"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          18.708
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          53.450
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-pehgtx"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          18.701
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          2529.446
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-13cpeq9"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          18.698
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          267.260
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-1wile65"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          18.689
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          267.260
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-1ewvd5i"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          18.642
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          801.790
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-kmz5gy"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          18.000
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          0.084
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-jcpbrj"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          15.000
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          0.050
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-4ea3pr"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          2.010
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          3.000
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-1eme6k2"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          2.000
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          1.000
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-w93jsg"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          1.300
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          1.000
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-p72o2v"
+      >
+        <div
+          class="css-1xli5rx"
+        />
+        <p
+          class="chakra-text css-rb85yi"
+        >
+          0.010
+        </p>
+        <p
+          class="chakra-text css-11ze7cv"
+        >
+          1.660
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
