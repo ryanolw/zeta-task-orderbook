@@ -3,15 +3,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Orderbook from '../components/Orderbook/Orderbook';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import fs from 'fs';
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
+
 const meta = {
   title: 'Orderbook',
   component: Orderbook,
-  // tags: ['autodocs'],
-  argTypes: {
-    dataAdapter: { control: 'select', options: ['zeta'] },
-  },
 } satisfies Meta<typeof Orderbook>;
 
 export default meta;

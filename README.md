@@ -2,6 +2,9 @@
 
 This repo contains a modular Orderbook component, that renders bids and asks.
 
+## Live demo
+https://ryanolw.github.io/zeta-task-orderbook
+
 ## Installation
 
 ```bash
