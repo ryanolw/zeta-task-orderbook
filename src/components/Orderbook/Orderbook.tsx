@@ -7,6 +7,8 @@ import OrderbookBase from './components/OrderbookBase';
 export default function Orderbook({
   dataAdapter,
   pollingIntervalMs = 5000,
+  className,
+  containerStyles,
 }: OrderbookProps) {
   const [data, setData] = useState<OrderBookData | null>(null);
   const [error, setError] = useState<Error | null>(null);
@@ -29,5 +31,12 @@ export default function Orderbook({
     fetchOrderData();
   }, pollingIntervalMs);
 
-  return <OrderbookBase data={data} error={error} />;
+  return (
+    <OrderbookBase
+      data={data}
+      error={error}
+      className={className}
+      containerStyles={containerStyles}
+    />
+  );
 }

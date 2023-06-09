@@ -35,7 +35,7 @@ $ pnpm install
     dataAdapter={() => localStore.retrieveOrderData()}
     pollingIntervalMs={5000} />
  ```
-/
+
 
 #### `pollingIntervalMs?: number`
 Interval (in milliseconds) to invoke `dataAdapter` for new data. Default: 5000
@@ -61,7 +61,7 @@ $ pnpm run storybook
 
 ### Styling 
 
-[Chakra UI](https://chakra-ui.com/getting-started) - theming library based on styled-system. By using this library, I am also making the assumption that the application codebase in which the Orderbook component will live in is built using Chakra UI / styled system. 
+[Chakra UI](https://chakra-ui.com/getting-started) - theming library based on styled-system. By using this library, I am also making the assumption that the application codebase in which the Orderbook component will live in is built using Chakra UI / styled system, where minimal styling customization is required.
 
 ### Code style / linting
 

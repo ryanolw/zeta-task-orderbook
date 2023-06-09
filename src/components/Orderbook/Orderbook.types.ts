@@ -1,3 +1,5 @@
+import { BoxProps } from '@chakra-ui/react';
+
 export type OrderBookData = { bids: Order[]; asks: Order[] };
 
 type DataAdapter = (apiUrl: string) => Promise<OrderBookData>;
@@ -42,4 +44,14 @@ export type OrderbookProps = {
    * Interval (in milliseconds) to invoke `dataAdapter` for new data. Default: 5000
    */
   pollingIntervalMs?: number;
+
+  /**
+   * Optional CSS classname that will be passed to the Orderbook container element
+   */
+  className?: string;
+
+  /**
+   * Optional Chakra UI Box props that will be passed to the Orderbook container element
+   */
+  containerStyles?: BoxProps;
 };

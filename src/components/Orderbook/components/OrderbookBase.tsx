@@ -1,4 +1,4 @@
-import { Box, Center, HStack, Text } from '@chakra-ui/react';
+import { Box, BoxProps, Center, HStack, Text } from '@chakra-ui/react';
 import { COLUMN_WIDTHS } from '../Orderbook.constants';
 import type { Order } from '../Orderbook.types';
 import OrderGroup from './OrderGroup';
@@ -6,12 +6,23 @@ import OrderGroup from './OrderGroup';
 export default function OrderbookBase({
   data,
   error,
+  className,
+  containerStyles,
 }: {
   data: { bids: Order[]; asks: Order[] } | null;
   error: Error | null;
+  className?: string;
+  containerStyles?: BoxProps;
 }) {
   return (
-    <Box h="50ch" overflow="auto" position="relative" borderRadius="md">
+    <Box
+      h="50ch"
+      overflow="auto"
+      position="relative"
+      borderRadius="md"
+      className={className}
+      {...containerStyles}
+    >
       <HStack
         position="sticky"
         top={0}
