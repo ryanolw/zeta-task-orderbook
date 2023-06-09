@@ -43,6 +43,13 @@ $ pnpm install
 #### `pollingIntervalMs?: number`
 Interval (in milliseconds) to invoke `dataAdapter` for new data. Default: 5000
 
+#### `className?: string`
+Optional CSS classname that will be passed to the Orderbook container element
+
+#### `containerStyles?: BoxProps`
+
+Optional Chakra UI Box props that will be passed to the Orderbook container element
+
 
 ## Development & Testing
 
